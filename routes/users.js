@@ -54,15 +54,15 @@ async (req, res, next) => {
 
     const id = req.params.id;
     try {
-        const currentValue = db.User.findByPk(id)
-        if (currentValue === null) {
+        const currentValue = await db.User.findByPk(id)
+        if (!currentValue) {
             res.status(404).send(`User with Id ${id} not found`)
         } else {
-            Object.keys(currentValue).forEach(key => {
-                if (currentValue[key] !== req.body[key]) {
-                    currentValue[key] = req.body[key]
-                }
-            })
+            currentValue.first_name = req.body.first_name;
+            currentValue.last_name = req.body.last_name;
+            currentValue.birthday = req.body.birthday;
+            currentValue.password = req.body.password;
+            currentValue.gender = req.body.gender;
             await currentValue.save();
             res.json()
         } 
