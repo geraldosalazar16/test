@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.container
+    div.row
+      div.col.s12.m6
+        div.card
+          div.card-content
+            span.card-title= title
+              div.row
+                div.input-field.col.s6
+                  label.text-primary First Name:
+                    strong  #{user.first_name}
+                div.input-field.col.s6
+                  label.text-primary Last Name:
+                    strong  #{user.last_name}
+              div.row
+                div.input-field.col.s6
+                  label.text-primary Birthday:
+                    strong  #{moment(user.birthday).format('DD/MM/YYYY')}
+                div.input-field.col.s6
+                  label.text-primary Gender:
+                    strong  #{user.gender_id}
+
+          div.card-action
+            a(href='/').btn-flat.waves-effect.waves-input-wrapper.white Cancel
+            a(href='/add/').btn-flat.waves-effect.waves-input-wrapper.blue.white-text Edit
+            div
+             form(method='POST' action=`/users/${user.user_id}`)
+               input(type='hidden' name='_method' value='DELETE')
+               button(type='submit').btn-flat.waves-effect.waves-input-wrapper.red.white-text Detele
+

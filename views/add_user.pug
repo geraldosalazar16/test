@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  div.container
+    div.row
+      div.col.s12.m6
+        div.card
+          div.card-content
+            span.card-title Create
+            div.row
+              form(method="POST" action="/users").col.s12
+                div.row
+                  div.input-field.col.s6
+                    input(type='text' id='first_name' placeholder='Enter First Name' name='first_name').validate
+                    label( for='first_name') First Name
+                  div.input-field.col.s6
+                    input(type='text' id='last_name' placeholder='Enter Last Name' name='last_name').validate
+                    label( for='last_name') Last Name
+                div.row
+                  div.input-field.col.s6
+                    input(type='date' id='birthday' placeholder='Enter Birthday' name='birthday').validate
+                    label( for='birthday') Birthday
+                  div.input-field.col.s6
+                    input(type='number' id='gender' placeholder='Enter Gender' name='gender').validate
+                    label( for='gender') Gender
+                    //p
+                    //  input(type='radio' id='female' placeholder='Enter Gender' name='group1' value='2').validate
+                    //  label( for='female').text-darken-1
+                    //p
+                    //  input(type='radio' id='male' placeholder='Enter Gender' name='group1' value='2').validate
+                    //  label( for='male').text-darken-1
+
+                div.row
+                  div.input-field.col.s6
+                    input(type='password' id='password' placeholder='Enter Password' name='password').validate
+                    label( for='password') Password
+
+                div.card-action
+                  a(href='/').btn-flat.waves-effect.waves-input-wrapper.white Cancel
+                  button(type="submit").btn-flat.waves-effect.waves-input-wrapper.blue.white-text Create
