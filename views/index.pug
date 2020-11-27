@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  div.container.pt20
+  div.p20
     table.striped.highlight
       thead
         tr
@@ -13,26 +13,23 @@ block content
           th CREATE AT
           th UPDATE AT
           th ACTION
-      tbody
-         each user in users
-           tr
-             td= user.user_id
-             td= user.first_name
-             td= user.last_name
-             td #{moment(user.birthday).format('DD/MM/YYYY')}
-             td= user.gender_id
-             td #{moment(user.createdAt).format('DD/MM/YYYY')}
-             td #{moment(user.updatedAt).format('DD/MM/YYYY')}
-             td
-               a(class="btn btn-primary" href=`/details/${user.user_id}`) Details
+      tbody(id='allusers')
+         // each user in users
+         //   tr
+         //     td= user.user_id
+         //     td= user.first_name
+         //     td= user.last_name
+         //     td #{moment(user.birthday).format('DD/MM/YYYY')}
+         //     td= user.gender_id
+         //     td #{moment(user.createdAt).format('DD/MM/YYYY')}
+         //     td #{moment(user.updatedAt).format('DD/MM/YYYY')}
+         //     td
+         //       a(class="btn btn-primary" href=`/details/${user.user_id}`) Details
 
 
 
     div.fixed-action-btn
       a(href='/add').waves-effect.waves-light.btn-floating.btn-large.blue.modal-trigger new
-      //div(id='modal1').modal
-      //  div.modal-content
-      //    h4 Create User
-      //    p Prueba
-      //  div.modal-footer
-      //    a(href='#!').modal-close.waves-effect.waves-green.btn-flat OK
+
+    div(id="modal")
+

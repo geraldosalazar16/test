@@ -6,27 +6,38 @@ block content
       div.col.s12.m6
         div.card
           div.card-content
-            span.card-title= title
+            span.card-title Details
+            div.row
               div.row
                 div.input-field.col.s6
-                  label.text-primary First Name:
-                    strong  #{user.first_name}
+                  input(type='text' id='first_name' placeholder='Enter First Name' name='first_name' value=`${user ? user.first_name : ''}`).validate
+                  label( for='first_name') First Name
                 div.input-field.col.s6
-                  label.text-primary Last Name:
-                    strong  #{user.last_name}
+                  input(type='text' id='last_name' placeholder='Enter Last Name' name='last_name' value=`${user ? user.last_name : ''}`).validate
+                  label( for='last_name') Last Name
               div.row
                 div.input-field.col.s6
-                  label.text-primary Birthday:
-                    strong  #{moment(user.birthday).format('DD/MM/YYYY')}
+                  input(type='date' id='birthday'  name='birthday' value=`${moment(user.birthday).format('yyyy/MM/DD')}`).validate
+                  label( for='birthday')
                 div.input-field.col.s6
-                  label.text-primary Gender:
-                    strong  #{user.gender_id}
+                  input(type='text' id='gender' placeholder='Enter Gender' name='gender' value=`${user ? user.gender : '1'}`)
+                  label( for='gender') Gender
+                div(id="select")
+              div.row
+                div.input-field.col.s6
+                  input(type='password' id='password' placeholder='Enter Password' name='password' value=`${user ? user.password : ''}`).validate
+                  label( for='password') Password
+
+                  input(type='hidden' id='id' name='id' value=`${user ? user.user_id : ''}`)
 
           div.card-action
             a(href='/').btn-flat.waves-effect.waves-input-wrapper.white Cancel
-            a(href='/add/').btn-flat.waves-effect.waves-input-wrapper.blue.white-text Edit
-            div
-             form(method='POST' action=`/users/${user.user_id}`)
-               input(type='hidden' name='_method' value='DELETE')
-               button(type='submit').btn-flat.waves-effect.waves-input-wrapper.red.white-text Detele
+            //a(href=`/edit/${user.user_id}`).btn-flat.waves-effect.waves-input-wrapper.blue.white-text Edit
+            button(id='button_edit').btn-flat.waves-effect.waves-input-wrapper.blue.white-text.mr20 Edit
+            //input(type='hidden' name='user_id' id='user_id' value='#{user.user_id}')
+            button(id='button_delete').btn-flat.waves-effect.waves-input-wrapper.red.white-text Detele
 
+block script
+  script(type='text/javascript', src='/js/jquery-2.1.1.min.js')
+  script(type='text/javascript', src='/js/materialize.js')
+  script(type='text/javascript', src='../js/init.js')

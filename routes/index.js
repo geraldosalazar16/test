@@ -8,7 +8,7 @@ const user = require('../db/models/user');
 /* GET home page. */
 router.get('/',async function(req, res, next) {
   const users = await db.User.findAll();
-  res.render('index', { title: 'List of Users', users });
+   res.render('index', { title: 'List of Users', users });
 });
 
 router.get('/add',async function(req, res, next) {
@@ -23,7 +23,15 @@ router.get('/details/:id',async function(req, res, next) {
   }else  {
     res.redirect('/');
   }
-
+});
+router.get('/edit/:id',async function(req, res, next) {
+  const id = req.params.id
+  if(id) {
+    const user = await db.User.findByPk(id);
+    res.render('add_user', { title: 'Edit User', user});
+  }else  {
+    res.redirect('/');
+  }
 });
 
 module.exports = router;

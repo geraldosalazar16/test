@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
     }
 });
 
-router.post('/', 
+router.post('/',
 [
     body('first_name').notEmpty(),
     body('last_name').notEmpty(),
@@ -38,7 +38,7 @@ async (req, res, next) => {
     }
 });
 
-router.put('/:id', 
+router.put('/:id',
 [
     body('first_name').notEmpty(),
     body('last_name').notEmpty(),
@@ -65,13 +65,13 @@ async (req, res, next) => {
             currentValue.gender = req.body.gender;
             await currentValue.save();
             res.json()
-        } 
+        }
     } catch (error) {
         handleError(error)
     }
 });
 
-router.delete('/:id', 
+router.delete('/:id',
 async (req, res, next) => {
     try {
         const id = req.params.id;
@@ -81,7 +81,7 @@ async (req, res, next) => {
         } else {
             await currentValue.destroy();
             res.json()
-        } 
+        }
     } catch (error) {
         handleError(error)
     }

@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94a4d25-4927-4d5a-b209-541e8b33a89e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/add_user.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/details.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/init.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/add_user.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/add_user.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/details.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/details.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
     </list>
@@ -33,6 +34,14 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +52,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.ns.project" value="true" />
@@ -55,6 +65,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Proyectos\test\views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Proyectos\test\views" />
     </key>
@@ -84,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606381620715</updated>
-      <workItem from="1606381621861" duration="24532000" />
+      <workItem from="1606381621861" duration="43133000" />
     </task>
     <servers />
   </component>
@@ -103,25 +116,29 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1345" height="256" key="GridCell.Tab.0.bottom" timestamp="1606418090104">
+    <state width="1899" height="401" key="GridCell.Tab.0.bottom" timestamp="1606482861085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1345" height="256" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606479905850" />
+    <state width="1899" height="401" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606482861085" />
+    <state width="1899" height="401" key="GridCell.Tab.0.center" timestamp="1606482861085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1345" height="256" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606479905849" />
+    <state width="1899" height="401" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606482861085" />
+    <state width="1899" height="401" key="GridCell.Tab.0.left" timestamp="1606482861084">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1345" height="256" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606479905849" />
+    <state width="1899" height="401" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606482861084" />
+    <state width="1899" height="401" key="GridCell.Tab.0.right" timestamp="1606482861085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1345" height="256" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606479905849" />
+    <state width="1899" height="401" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606482861085" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606476430922">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="256" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606418090104" />
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606405714477" />
-    <state width="1345" height="256" key="GridCell.Tab.0.center" timestamp="1606418090104">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="256" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606418090104" />
-    <state width="1899" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606405714477" />
-    <state width="1345" height="256" key="GridCell.Tab.0.left" timestamp="1606418090103">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="256" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606418090103" />
-    <state width="1899" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606405714477" />
-    <state width="1345" height="256" key="GridCell.Tab.0.right" timestamp="1606418090104">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1345" height="256" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606418090104" />
-    <state width="1899" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606405714477" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1606476430922" />
   </component>
 </project>
