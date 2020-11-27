@@ -2,7 +2,7 @@ $(document).ready( function () {
 
   function load() {
     $.ajax({
-      url : 'http://localhost:3000/users',
+      url : 'http://localhost:3000/users/',
       type : 'GET',
       dataType : 'json',
       success : function(response) {
@@ -28,7 +28,7 @@ $(document).ready( function () {
         alert('Disculpe, existió un problema');
       }
     });
-    function formatDate()
+    function formatDate() {}
     // $('#select').append(" <div class=\"input-field col s12\">\n" +
     //     "    <select>\n" +
     //     "      <option value=\"\" disabled selected>Choose your option</option>\n" +
@@ -46,11 +46,12 @@ $(document).ready( function () {
     var fname = $('#first_name').val();
     var lname = $('#last_name').val();
     var birthday = $('#birthday').val();
+    birthday = new Date(birthday).toISOString();
     var gender = $('#gender').val();
     var password = $('#password').val();
     if(fname && lname && birthday && gender && password) {
       $.ajax({
-        url : 'http://localhost:3000/users',
+        url : 'http://localhost:3000/users/',
         type : 'POST',
         data : { first_name : fname,last_name: lname, birthday, gender: Number(gender), password},
         dataType : 'json',

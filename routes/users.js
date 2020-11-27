@@ -18,7 +18,7 @@ router.post('/',
 [
     body('first_name').notEmpty(),
     body('last_name').notEmpty(),
-    body('birthday').isDate(),
+    body('birthday').notEmpty(),
     body('password').notEmpty(),
     body('gender').notEmpty(),
 ],
@@ -75,11 +75,11 @@ router.delete('/:id',
 async (req, res, next) => {
     try {
         const id = req.params.id;
-        const user = db.User.findByPk(id)
+        const user = await db.User.findByPk(id)
         if (user === null) {
             res.status(404).send(`User with Id ${id} not found`)
         } else {
-            await currentValue.destroy();
+            await user.destroy();
             res.json()
         }
     } catch (error) {
